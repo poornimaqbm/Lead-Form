@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Gradient colors based on your image */
+    background: linear-gradient(to bottom right, #87CEEB, #ADD8E6, #AFEEEE); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Add some padding for very small screens */
+    box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width on larger screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em; /* Larger heading */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* Makes label take full width and puts input on next line */
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Crucial for responsive forms */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle shadow on focus */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Slightly smaller heading on mobile */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select,
+    textarea,
+    button[type="submit"] {
+        padding: 10px; /* Slightly less padding for smaller screens */
+        font-size: 15px; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+}
