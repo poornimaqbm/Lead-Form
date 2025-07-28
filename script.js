@@ -17,14 +17,25 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.text())
-    .then(result => {
-      alert("Form submitted successfully!");
-      document.getElementById("leadForm").reset();
-    })
-    .catch(error => {
-      alert("Error submitting form.");
-      console.error(error);
-    });
-  });
+    fetch('YOUR_SCRIPT_URL', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData)
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.text();
+})
+.then(result => {
+  alert("Form submitted successfully");
+  document.getElementById("leadForm").reset();
+})
+.catch(error => {
+  alert("Error submitting form. See console.");
+  console.error("Submit error:", error);
+});
 
