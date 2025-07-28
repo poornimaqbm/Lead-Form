@@ -10,7 +10,7 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
         comment: document.getElementById('comments').value
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbwEbdGYz_rvdiRdhOOseN3vSwZKv-MNKhPQ4MOyq7e4KB_xEVRg8BM8Z0NrDLOPIYh-/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwc-p2oio3Uxo7iHhOMD9rbml0NVVM19guIS7Vn5-xeKe1moVNqdqCYm6BjnIIBRg4/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
