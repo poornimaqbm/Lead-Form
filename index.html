@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Lead</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Lead Capture Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Please enter a 10 digit mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="job_type">Job Type</label>
+                <select id="job_type" name="job_type" required>
+                    <option value="">Select Job Type</option>
+                    <option value="Full-time">Field Executive</option>
+                    <option value="Part-time"> Picker</option>
+                    <option value="Freelance"> Packer</option>
+                    <option value="Contract">Loader</option>
+                    <option value="Internship">Delivery</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Add Lead</button>
+        </form>
+    </div>
+</body>
+</html>
